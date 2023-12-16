@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inch To centimeters</title>
+</head>
+<body>
+    <h1>Inches to Centimeters converter</h1>
+    <p>Enter Inchs:</p>
+    <input type="text" id="inchInput">
+    <button onclick="convertToCentimeters()">Convert</button>   
+    <p id="result"></p>
+
+    <script>
+        function inchesToCentimeters(inches) {
+            var centimeters = inches * 2.54;
+            return centimeters;
+        }
+        function convertToCentimeters() {
+            var inchInput = parseFloat(document.getElementById("inchInput").value);
+            if (!isNaN(inchInput)) {
+                var centimeters = inchesToCentimeters(inchInput);
+                document.getElementById("result").innerHTML = inchInput + "inches is equal to" + centimeters.toFixed(2) + "centimeters.";
+            } else {
+                document.getElementById("result").innerHTML = "Please enter a valid length in inches.";
+            }
+        }
+    </script>
+</body>
+</html>
