@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            text-align: center;
+            margin-top: 180px;
+            font-size: 30px;
+            color: blue;
+           
+        }
+        h1{
+            color:rgb(153, 4, 133) ;
+        }
+       
+    </style>
+</head>
+<body>
+    <h1>Current Date and Time:</h1>
+    <p id="datetime"></p>
+  
+    <script>
+         function updateDateTime() {
+            const dateTimeElement = document.getElementById("datetime");
+            const now = new Date();
+            dateTimeElement.textContent = now.toLocaleString();
+        }
+
+        // Initial call to display date and time
+        updateDateTime();
+
+        // Update date and time every second
+        setInterval(updateDateTime, 1000);
+        
+    </script>
+    
+</body>
+</html>
