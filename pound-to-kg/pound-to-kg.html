@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Pound to Kilogram Converter</title>
+    </head>
+    <body>
+      <h1>Pound to Kilogram Converter</h1>
+      
+      <p>Enter pounds:</p>
+      <input type="text" id="poundInput">
+      <button onclick="convertToKilograms()">Convert</button>
+      
+      <p id="result"></p>
+    
+      <script>
+        // Function to convert pounds to kilograms
+        function poundToKilogram(pounds) {
+          var kilograms = pounds * 0.45359237;
+          return kilograms;
+        }
+    
+        // Function to handle button click event
+        function convertToKilograms() {
+          var poundInput = parseFloat(document.getElementById("poundInput").value);
+          if (!isNaN(poundInput)) {
+            var kilograms = poundToKilogram(poundInput);
+            document.getElementById("result").innerHTML = poundInput + " pounds is equal to " + kilograms.toFixed(2) + " kilograms";
+          } else {
+            document.getElementById("result").innerHTML = "Please enter a valid weight in pounds.";
+          }
+        }
+      </script>
+    </body>
+    </html>
+    
+
+   
+</body>
+</html>
